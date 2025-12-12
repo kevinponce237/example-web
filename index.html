@@ -7,197 +7,245 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Paleta de Colores Mejorada */
-        .header-bg {
-            background-color: #0d1a26; /* Azul Oscuro Profundo (Épico) */
-        }
-        .text-pelatlantico {
-            color: #ffc107; /* Dorado/Ámbar Brillante */
-        }
-        .border-pelatlantico {
-            border-color: #ffc107;
-        }
-        .bg-gradient-pelatlantico {
-            background-image: linear-gradient(to right, #0d1a26, #1a202c);
-        }
-        /* Estilo para la lista de miembros */
+        .header-bg { background-color: #0d1a26; }
+        .text-pelatlantico { color: #ffc107; }
+        .bg-pelatlantico { background-color: #ffc107; }
+        .border-pelatlantico { border-color: #ffc107; }
+        
+        /* Efectos de tarjetas */
         .member-card {
             transition: all 0.3s ease-in-out;
             border-bottom: 5px solid transparent;
         }
         .member-card:hover {
             transform: translateY(-5px);
-            border-bottom: 5px solid #3b82f6; /* Índigo de énfasis */
+            border-bottom: 5px solid #3b82f6;
         }
-        /* Estilo para el Lore Sagrado */
-        .lore-bg {
-            background-color: #1f2937; /* Gris oscuro para contraste */
+        
+        .lore-bg { background-color: #1f2937; }
+        
+        .flag-emoji {
+            font-size: 3rem;
+            line-height: 1;
+            display: inline-block;
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans antialiased">
+<body class="bg-gray-50 font-sans antialiased overflow-x-hidden w-full">
 
-    <nav class="header-bg p-4 shadow-2xl sticky top-0 z-50 border-b border-pelatlantico">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-white tracking-widest text-pelatlantico">
-                P E L A T L Á N T I C O
+    <nav class="header-bg p-4 shadow-2xl sticky top-0 z-50 border-b border-pelatlantico w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="text-lg sm:text-3xl font-extrabold text-white tracking-widest text-pelatlantico truncate">
+                PELATLÁNTICO
             </a>
             <div class="space-x-6 hidden md:flex">
-                <a href="#mision" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">📜 Nuestra Historia</a>
-                <a href="#miembros" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">⚔️ El Batallón</a>
-                <a href="#teams" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">🤝 Equipos de Asalto</a>
-                <a href="#lore" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">✨ El Lore Sagrado</a>
+                <a href="#mision" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">Esencia</a>
+                <a href="#miembros" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">Batallón</a>
+                <a href="#teams" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">Equipos</a>
+                <a href="#lempiras" class="text-gray-300 hover:text-pelatlantico transition duration-200 font-medium">Estado</a>
             </div>
         </div>
     </nav>
 
-    <header class="header-bg text-white py-32 md:py-48 border-b-4 border-pelatlantico">
-        <div class="container mx-auto px-6 text-center">
-            <span class="text-pelatlantico text-xl font-bold uppercase tracking-widest block mb-4">La Confraternidad Global</span>
-            <h1 class="text-7xl md:text-9xl font-extrabold mb-6 tracking-tighter shadow-text">
+    <header class="header-bg text-white py-16 md:py-40 border-b-4 border-pelatlantico w-full relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute right-0 top-0 w-64 h-64 bg-yellow-500 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute left-0 bottom-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="text-pelatlantico text-lg md:text-xl font-bold uppercase tracking-widest block mb-4 animate-pulse">La Confraternidad Global</span>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 tracking-tighter break-words shadow-text leading-tight">
                 PELATLÁNTICO
             </h1>
-            <p class="text-2xl md:text-3xl opacity-90 max-w-4xl mx-auto mb-12 italic">
-                Siete naciones, un solo destino. La hermandad que trasciende continentes.
+            <p class="text-lg md:text-3xl opacity-90 max-w-4xl mx-auto mb-12 italic px-2">
+                Siete naciones, un solo destino. La hermandad que trasciende el tiempo y el espacio.
             </p>
-            <a href="#miembros" class="bg-pelatlantico text-gray-900 font-extrabold py-4 px-12 text-lg rounded-full transition duration-300 shadow-2xl transform hover:scale-110 hover:shadow-pelatlantico">
-                CONOCE A LA LEYENDA
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#mision" class="inline-block bg-pelatlantico text-gray-900 font-extrabold py-3 px-8 md:py-4 md:px-12 text-base md:text-lg rounded-full transition duration-300 shadow-2xl transform hover:scale-105 hover:shadow-pelatlantico">
+                    DESCUBRE LA MISIÓN
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="miembros" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <span class="text-pelatlantico font-semibold uppercase text-sm mb-2 block text-center">EL BATALLÓN DE ÉLITE</span>
-            <h2 class="text-5xl font-bold text-gray-800 mb-16 text-center">
-                Miembros Clave del Pelotón
+    <section id="mision" class="py-16 md:py-24 bg-white w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="text-pelatlantico font-semibold uppercase text-sm mb-2 block text-center">Nuestra Esencia</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-12 text-center">
+                Más que un Grupo, un Ecosistema
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-200">
+                    <div class="text-6xl mb-6 text-pelatlantico transform hover:scale-110 transition duration-300">🤝</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Conexión Sólida</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Amistad inquebrantable forjada con años de experiencias compartidas, altibajos, debates eternos y muchísimas pizzas.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-200">
+                    <div class="text-6xl mb-6 text-pelatlantico transform hover:scale-110 transition duration-300">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Planes Espontáneos</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nuestra especialidad es convertir un simple "¿qué hacemos?" en una gesta memorable. Si hay riesgo, vamos.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-200">
+                    <div class="text-6xl mb-6 text-pelatlantico transform hover:scale-110 transition duration-300">🤣</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Humor de Élite</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        El sarcasmo y las referencias internas son nuestra moneda. Si no entiendes el chiste, no eres tú, es el Lore.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="miembros" class="py-16 md:py-24 bg-gray-50 w-full border-t border-gray-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="text-pelatlantico font-semibold uppercase text-sm mb-2 block text-center">EL BATALLÓN DE ÉLITE</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-10 md:mb-16 text-center">
+                Miembros Clave
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 
-                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-yellow-500">
-                    <div class="text-6xl mb-4 text-center">🇵🇦</div>
+                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-yellow-500 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇵🇦</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">Oscar Rivera</h3>
-                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">Panameño</p>
-                    <p class="text-gray-700 text-base">
-                        El arquitecto del ocio. Fanático incondicional de los **Legos** (maestro constructor) y con la velocidad de la **Fórmula 1** en las venas.
-                    </p>
+                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">El Arquitecto</p>
+                    <p class="text-gray-700 text-sm">Fanático de los Legos y la F1. Construye imperios de plástico.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-green-600">
-                    <div class="text-6xl mb-4 text-center">🇸🇻</div>
+                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-green-600 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇸🇻</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">José Melgares</h3>
-                    <p class="text-sm uppercase text-red-500 font-medium mb-3">El Abuelo (Salvadoreño)</p>
-                    <p class="text-gray-700 text-base">
-                        El veterano y pilar del grupo. Aporta la sabiduría ancestral, la calma y el conocimiento tácito sobre todas las operaciones del Lore.
-                    </p>
+                    <p class="text-sm uppercase text-red-500 font-medium mb-3">El Abuelo</p>
+                    <p class="text-gray-700 text-sm">Sabiduría ancestral. Si hay una duda, él tiene la respuesta (o inventa una).</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-red-600">
-                    <div class="text-6xl mb-4 text-center">🇵🇪</div>
+                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-red-600 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇵🇪</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">Felix Manrique</h3>
-                    <p class="text-sm uppercase text-blue-500 font-medium mb-3">MrJacket (Peruano)</p>
-                    <p class="text-gray-700 text-base">
-                        El hombre de las capas y las soluciones técnicas. Un operador estratégico fundamental en las misiones nocturnas.
-                    </p>
+                    <p class="text-sm uppercase text-blue-500 font-medium mb-3">MrJacket</p>
+                    <p class="text-gray-700 text-sm">El hombre de las capas y soluciones técnicas. Operador nocturno.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-blue-600">
-                    <div class="text-6xl mb-4 text-center">🇭🇳</div>
+                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-blue-600 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇭🇳</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">Javier Urlcick</h3>
-                    <p class="text-sm uppercase text-purple-600 font-medium mb-3">El de la Badana (Hondureño)</p>
-                    <p class="text-gray-700 text-base">
-                        El dueño del alias más misterioso. Su rol es vital para mantener la moral alta y la Badana funcionando correctamente.
-                    </p>
+                    <p class="text-sm uppercase text-purple-600 font-medium mb-3">El de la Badana</p>
+                    <p class="text-gray-700 text-sm">Moral alta y estilo único. El alma de la fiesta técnica.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-green-500">
-                    <div class="text-6xl mb-4 text-center">🇸🇻</div>
+                <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-green-500 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇸🇻</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">Abner Villeda</h3>
-                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">Salvadoreño</p>
-                    <p class="text-gray-700 text-base">
-                        Un agente polivalente, pieza clave en las misiones de Ayuntamientos y raids. Fiable bajo cualquier circunstancia.
-                    </p>
+                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">El Polivalente</p>
+                    <p class="text-gray-700 text-sm">Pieza clave en raids. Si hace falta un tanque o un healer, él es.</p>
                 </div>
 
-                 <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-blue-500">
-                    <div class="text-6xl mb-4 text-center">🇭🇳</div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-blue-500 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇭🇳</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">Dylan</h3>
-                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">Hondureño</p>
-                    <p class="text-gray-700 text-base">
-                        El operador de alto riesgo. Especialista en misiones radicales y Ayuntamientos. Su juventud es su mayor arma.
-                    </p>
+                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">El Operador</p>
+                    <p class="text-gray-700 text-sm">Especialista en misiones radicales y decisiones de alto riesgo.</p>
                 </div>
 
-                 <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-red-500">
-                    <div class="text-6xl mb-4 text-center">🇲🇽</div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-red-500 group">
+                    <div class="mb-4 text-center transform group-hover:scale-110 transition duration-300"><span class="flag-emoji">🇲🇽</span></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-1">Emilio Musiño</h3>
-                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">Mexicano</p>
-                    <p class="text-gray-700 text-base">
-                        El emisario diplomático. Fundamental en las tareas del equipo de Ayuntamientos. Siempre listo para la acción grupal.
-                    </p>
+                    <p class="text-sm uppercase text-gray-500 font-medium mb-3">El Emisario</p>
+                    <p class="text-gray-700 text-sm">Diplomático del equipo. Experto en negociaciones difíciles.</p>
                 </div>
 
-                 <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-indigo-500">
-                    <div class="text-6xl mb-4 text-center">💻</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-1">Marco Figueroa & Kevin</h3>
+                 <div class="bg-white p-6 rounded-xl shadow-lg member-card border-t-8 border-indigo-500 group">
+                    <div class="text-5xl md:text-6xl mb-4 text-center transform group-hover:rotate-12 transition duration-300">💻</div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-1">Marco & Kevin</h3>
                     <p class="text-sm uppercase text-gray-500 font-medium mb-3">Los Ingenieros</p>
-                    <p class="text-gray-700 text-base">
-                        Los arquitectos digitales. La unidad responsable de la programación, el código y la infraestructura tecnológica del grupo.
-                    </p>
+                    <p class="text-gray-700 text-sm">Arquitectos digitales. Si el servidor corre, es culpa de ellos.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="teams" class="py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
+    <section class="py-16 bg-gray-900 text-white w-full border-b border-gray-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-pelatlantico mb-2">∞</div>
+                    <div class="text-sm uppercase tracking-wider text-gray-400">Debates</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">2.5k+</div>
+                    <div class="text-sm uppercase tracking-wider text-gray-400">Stickers</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-green-500 mb-2">99%</div>
+                    <div class="text-sm uppercase tracking-wider text-gray-400">Caos</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-red-500 mb-2">0</div>
+                    <div class="text-sm uppercase tracking-wider text-gray-400">Aburrimiento</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teams" class="py-16 md:py-24 bg-white w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <span class="text-pelatlantico font-semibold uppercase text-sm mb-2 block text-center">ESTRUCTURA OPERATIVA</span>
-            <h2 class="text-5xl font-bold mb-16 text-center">
-                Equipos de Asalto Pelatlántico
+            <h2 class="text-3xl md:text-5xl font-bold mb-10 text-center text-gray-900">
+                Equipos de Asalto
             </h2>
-            <div class="grid lg:grid-cols-2 gap-12">
-
-                <div class="space-y-8">
-                    <div class="p-6 bg-gray-800 rounded-lg shadow-xl border-l-4 border-indigo-500">
-                        <h3 class="text-3xl font-bold mb-2 flex items-center">
-                            <span class="text-indigo-400 mr-3">💻</span> Team Programación
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
+                
+                <div class="col-span-1 lg:col-span-2">
+                     <div class="p-6 md:p-8 bg-orange-50 rounded-xl shadow-lg border-l-4 border-orange-500 hover:shadow-2xl transition duration-300 text-center lg:text-left">
+                        <h3 class="text-2xl md:text-4xl font-bold mb-2 flex items-center justify-center lg:justify-start text-gray-900">
+                            <span class="text-orange-500 mr-3">🏠</span> Team Residencia
                         </h3>
-                        <p class="text-gray-400 mb-3">El cerebro digital del grupo, responsable de la infraestructura y el código.</p>
-                        <p class="font-medium text-lg">Miembros: <span class="text-white">Marco, Kevin, Felix, Jose</span></p>
+                        <p class="text-gray-700 text-base md:text-lg mb-4">
+                            El Cuartel General. Donde se cocinan las ideas, se queman las pizzas y se planifica la dominación mundial (o la siesta). El epicentro del caos.
+                        </p>
+                        <p class="font-bold text-lg text-gray-900">Habitantes del Caos: <span class="text-orange-600">Jorge, Oscar, Jose, Felix</span></p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 md:space-y-8">
+                    <div class="p-5 md:p-6 bg-white rounded-xl shadow-lg border-l-4 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <h3 class="text-xl md:text-3xl font-bold mb-2 flex items-center text-gray-900">
+                            <span class="text-indigo-500 mr-3">💻</span> Team Programación
+                        </h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-3">Cerebro digital e infraestructura.</p>
+                        <p class="font-medium text-base md:text-lg text-gray-800">Miembros: <span class="text-indigo-600 font-bold">Marco, Kevin, Felix, Jose</span></p>
                     </div>
 
-                    <div class="p-6 bg-gray-800 rounded-lg shadow-xl border-l-4 border-yellow-500">
-                        <h3 class="text-3xl font-bold mb-2 flex items-center">
-                            <span class="text-yellow-400 mr-3">🍔</span> Team Residencia y Burger
+                    <div class="p-5 md:p-6 bg-white rounded-xl shadow-lg border-l-4 border-yellow-500 hover:shadow-2xl transition duration-300">
+                        <h3 class="text-xl md:text-3xl font-bold mb-2 flex items-center text-gray-900">
+                            <span class="text-yellow-500 mr-3">🍔</span> Team Burger
                         </h3>
-                        <p class="text-gray-400 mb-3">La unidad de logística social y alimentación. Expertos en dónde reunirse y qué devorar.</p>
-                        <p class="font-medium text-lg">Miembros: <span class="text-white">Jorge, Oscar, Jose, Felix</span></p>
-                    </div>
-
-                    <div class="p-6 bg-gray-800 rounded-lg shadow-xl border-l-4 border-red-500">
-                        <h3 class="text-3xl font-bold mb-2 flex items-center">
-                            <span class="text-red-400 mr-3">🏛️</span> Team Ayuntamiento
-                        </h3>
-                        <p class="text-gray-400 mb-3">El cuerpo diplomático encargado de las gestiones y el orden local (o la falta de él).</p>
-                        <p class="font-medium text-lg">Miembros: <span class="text-white">Emilio, Abner, Dylan</span></p>
+                        <p class="text-gray-600 text-sm md:text-base mb-3">Expertos en cata de hamburguesas.</p>
+                        <p class="font-medium text-base md:text-lg text-gray-800">Miembros: <span class="text-yellow-600 font-bold">Jorge, Oscar, Jose, Felix</span></p>
                     </div>
                 </div>
                 
-                <div class="space-y-8">
-                    <div class="p-6 bg-gray-800 rounded-lg shadow-xl border-l-4 border-pink-500">
-                        <h3 class="text-3xl font-bold mb-2 flex items-center">
-                            <span class="text-pink-400 mr-3">💥</span> Team Raidcal
+                <div class="space-y-6 md:space-y-8">
+                    <div class="p-5 md:p-6 bg-white rounded-xl shadow-lg border-l-4 border-pink-500 hover:shadow-2xl transition duration-300">
+                        <h3 class="text-xl md:text-3xl font-bold mb-2 flex items-center text-gray-900">
+                            <span class="text-pink-500 mr-3">💥</span> Team Raidcal
                         </h3>
-                        <p class="text-gray-400 mb-3">La unidad de acción y ejecución rápida. Listos para la aventura radical en cualquier momento.</p>
-                        <p class="font-medium text-lg">Miembros: <span class="text-white">Dylan, Abner, Jorge</span></p>
+                        <p class="text-gray-600 text-sm md:text-base mb-3">Acción y ejecución rápida.</p>
+                        <p class="font-medium text-base md:text-lg text-gray-800">Miembros: <span class="text-pink-600 font-bold">Dylan, Abner, Jorge</span></p>
                     </div>
                     
-                    <div class="p-6 bg-gray-800 rounded-lg shadow-xl border-l-4 border-green-500">
-                        <h3 class="text-3xl font-bold mb-2 flex items-center">
-                            <span class="text-green-400 mr-3">🥙</span> Team Kebab (La Hermandad)
+                    <div class="p-5 md:p-6 bg-white rounded-xl shadow-lg border-l-4 border-red-500 hover:shadow-2xl transition duration-300">
+                        <h3 class="text-xl md:text-3xl font-bold mb-2 flex items-center text-gray-900">
+                            <span class="text-red-500 mr-3">🏛️</span> Team Ayuntamiento
                         </h3>
-                        <p class="text-gray-400 mb-3">La célula fundamental del grupo. Responsables de las decisiones más importantes y del sustento.</p>
-                        <p class="font-medium text-lg">Miembros: <span class="text-white">Kevin, Abner, Jose, Oscar, Felix, Jorge</span></p>
+                        <p class="text-gray-600 text-sm md:text-base mb-3">Diplomacia y gestión burocrática.</p>
+                        <p class="font-medium text-base md:text-lg text-gray-800">Miembros: <span class="text-red-600 font-bold">Emilio, Abner, Dylan</span></p>
                     </div>
                 </div>
 
@@ -205,34 +253,69 @@
         </div>
     </section>
 
-    <section id="lore" class="py-24 lore-bg text-white border-t-4 border-b-4 border-pelatlantico">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <span class="text-pelatlantico font-extrabold uppercase text-lg mb-2 block text-center">LAS LEYES NO ESCRITAS</span>
-            <h2 class="text-5xl font-bold text-white mb-10 text-center">
-                El Santo Lore
-            </h2>
-            <div class="bg-gray-800 p-10 rounded-xl shadow-2xl">
-                <blockquote class="text-blue-400 text-xl leading-relaxed space-y-4 font-mono">
-                    <p class="border-l-4 border-pelatlantico pl-4">🔥🍔📄</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">🔴⛔stop</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">🥩🧑‍🏫</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">🌙🍕👮‍♂️🚽</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">🏰💥-👩‍🦳🤤</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">🏃🏿‍♂️🏃‍♂️🏠🍰</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">🔥💤🧑🏻‍🚒🧑🏻‍💻</p>
-                    <p class="border-l-4 border-pelatlantico pl-4">👴🔪🥋🌈</p>
+    <section class="py-16 bg-gray-50 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Lo que dicen en los pasillos</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <blockquote class="bg-white p-6 rounded-lg shadow italic text-gray-600 border-l-4 border-pelatlantico">
+                    "Yo solo vine por la comida y me quedé por el trauma compartido. Y por los Legos, obviamente."
+                    <footer class="mt-2 text-sm text-gray-900 font-bold not-italic">- El Arquitecto (Oscar)</footer>
+                </blockquote>
+                <blockquote class="bg-white p-6 rounded-lg shadow italic text-gray-600 border-l-4 border-blue-500">
+                    "Si Pelatlántico fuera una empresa, ya habríamos quebrado. Pero como hermandad, somos millonarios en anécdotas."
+                    <footer class="mt-2 text-sm text-gray-900 font-bold not-italic">- El Abuelo (Jose)</footer>
                 </blockquote>
             </div>
-            <p class="mt-8 text-center text-gray-400 text-sm italic">
-                Solo los miembros iniciados conocen el verdadero significado y contexto de cada mandamiento del Santo Lore.
+        </div>
+    </section>
+
+    <section id="lore" class="py-16 md:py-24 lore-bg text-white border-t-4 border-b-4 border-pelatlantico w-full">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="text-pelatlantico font-extrabold uppercase text-lg mb-2 block text-center">LEYES NO ESCRITAS</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 text-center">
+                El Santo Lore
+            </h2>
+            <div class="bg-gray-800 p-6 md:p-10 rounded-xl shadow-2xl">
+                <blockquote class="text-blue-400 text-lg md:text-xl leading-relaxed space-y-4 font-mono overflow-hidden">
+                    <p class="border-l-4 border-pelatlantico pl-4 hover:bg-gray-700 transition p-2 rounded">🔥🍔📄
+                        <span class="text-white block sm:inline">No le den un mechero a Jorge.</span>
+                    </p>
+                    <p class="border-l-4 border-pelatlantico pl-4 hover:bg-gray-700 transition p-2 rounded">🔴⛔stop <span class="text-white block sm:inline">Ya es tarde voy a llamar a la policía.</span></p>
+                    <p class="border-l-4 border-pelatlantico pl-4 hover:bg-gray-700 transition p-2 rounded">
+                        🥩🧑‍🏫: <span class="text-white block sm:inline">¿Qué hace Breñosa en el Carrefour?</span>
+                    </p>
+                    <p class="border-l-4 border-pelatlantico pl-4 hover:bg-gray-700 transition p-2 rounded">🌙🍕👮‍♂️🚽</p>
+                    <p class="border-l-4 border-pelatlantico pl-4 hover:bg-gray-700 transition p-2 rounded">
+                        🏰💥-👩‍🦳🤤: <span class="text-white block sm:inline">Vendió la Torre por un culo.</span>
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="lempiras" class="py-12 bg-yellow-400 text-gray-900 w-full">
+        <div class="w-full max-w-4xl mx-auto px-4 text-center">
+            <div class="text-6xl mb-4">⚠️</div>
+            <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">
+                COMUNICADO OFICIAL: CRISIS INTERNA
+            </h2>
+            <p class="text-xl md:text-2xl font-bold mb-4">
+                "El grupo se está desmoronando."
+            </p>
+            <p class="text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+                Fuentes internas confirman que la lealtad es cosa del pasado. Al final del día, todos aquí son unos <span class="bg-black text-yellow-400 px-2 py-1 transform -rotate-2 inline-block font-black">LEMPIRAS</span>. 
+                <br><br>
+                (No confíen en nadie, especialmente si ofrecen pizza gratis).
             </p>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-400 py-8">
-        <div class="container mx-auto px-6 text-center text-sm">
-            <p>&copy; 2025 Pelatlántico. Todos los derechos reservados a la Hermandad.</p>
-            <p class="mt-2">Desarrollo Frontend por el Team Programación.</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 w-full border-t border-gray-800">
+        <div class="w-full max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4 tracking-widest">PELATLÁNTICO</h2>
+            <p class="mb-6">Desde el Atlántico para el mundo.</p>
+            <p class="text-sm">&copy; 2025 Pelatlántico. Todos los derechos reservados.</p>
+            <p class="mt-2 text-xs">Desarrollado con caos por el Team Programación.</p>
         </div>
     </footer>
 
